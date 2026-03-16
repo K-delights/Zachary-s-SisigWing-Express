@@ -1,1 +1,1 @@
-# Zachary-s-SisigWing-Express
+Upload to GitHub Pages. Replace Google Script URLs in index.html to enable orders and reviews storage. Replace images in /images with real photos.

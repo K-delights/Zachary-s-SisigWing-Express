@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,107 +6,20 @@
 <title>Zachary's SisigWing Express</title>
 
 <style>
-
-body{
-font-family:Arial;
-margin:0;
-background:#fafafa;
-}
-
-header{
-background:#8B0000;
-color:white;
-text-align:center;
-padding:35px;
-}
-
-.section{
-max-width:1100px;
-margin:auto;
-padding:40px 20px;
-}
-
-.menu-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-.card{
-background:white;
-padding:15px;
-border-radius:12px;
-box-shadow:0 8px 20px rgba(0,0,0,.1);
-text-align:center;
-}
-
-.card img{
-width:100%;
-border-radius:10px;
-}
-
-button{
-background:#ff4d4d;
-border:none;
-color:white;
-padding:10px 15px;
-border-radius:20px;
-cursor:pointer;
-margin-top:8px;
-}
-
-.cart{
-background:white;
-padding:20px;
-border-radius:12px;
-box-shadow:0 8px 20px rgba(0,0,0,.1);
-}
-
-.cart-item{
-display:flex;
-justify-content:space-between;
-margin:6px 0;
-}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:10px;
-}
-
-.gallery img{
-width:100%;
-border-radius:10px;
-}
-
-.review{
-background:white;
-padding:15px;
-margin-top:10px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
-
-.admin{
-background:white;
-padding:20px;
-border-radius:12px;
-box-shadow:0 8px 20px rgba(0,0,0,.1);
-margin-top:20px;
-}
-
-.messenger{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#0084ff;
-color:white;
-padding:12px 18px;
-border-radius:40px;
-text-decoration:none;
-font-weight:bold;
-}
-
+body{font-family:Arial;margin:0;background:#fafafa;}
+header{background:#8B0000;color:white;text-align:center;padding:35px;}
+.section{max-width:1100px;margin:auto;padding:40px 20px;}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+.card{background:white;padding:15px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.1);text-align:center;}
+.card img{width:100%;border-radius:10px;cursor:pointer;}
+button{background:#ff4d4d;border:none;color:white;padding:10px 15px;border-radius:20px;cursor:pointer;margin-top:8px;}
+.cart{background:white;padding:20px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.1);}
+.cart-item{display:flex;justify-content:space-between;margin:6px 0;}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;}
+.gallery img{width:100%;border-radius:10px;}
+.review{background:white;padding:15px;margin-top:10px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,.1);}
+.admin{background:white;padding:20px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.1);margin-top:20px;}
+.messenger{position:fixed;bottom:20px;right:20px;background:#0084ff;color:white;padding:12px 18px;border-radius:40px;text-decoration:none;font-weight:bold;}
 </style>
 </head>
 
@@ -118,111 +30,87 @@ font-weight:bold;
 <p>Sisig & Chicken Wings</p>
 </header>
 
-
 <div class="section">
-
 <h2>Sisig</h2>
-
 <div class="menu-grid">
 
 <div class="card">
-<img src="images/sisig_meal.jpg">
+<img src="images/sisig_meal.jpg" onclick="addItem('Sisig Meal',95)">
 <h3>Sisig Meal</h3>
 <p>₱95</p>
 <button onclick="addItem('Sisig Meal',95)">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="images/sisig_platter.jpg">
+<img src="images/sisig_platter.jpg" onclick="addItem('Sisig Platter',160)">
 <h3>Sisig Platter</h3>
 <p>₱160</p>
 <button onclick="addItem('Sisig Platter',160)">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="images/sisig_egg.jpg">
+<img src="images/sisig_egg.jpg" onclick="addItem('Sisig Egg Platter',175)">
 <h3>Sisig Platter w/ Egg</h3>
 <p>₱175</p>
 <button onclick="addItem('Sisig Egg Platter',175)">Add to Cart</button>
 </div>
 
 </div>
-
 </div>
 
-
 <div class="section">
-
 <h2>Chicken Wings</h2>
-
 <div class="menu-grid">
 
 <div class="card">
-<img src="images/buffalo.jpg">
+<img src="images/buffalo.jpg" onclick="addItem('Buffalo Chicken Meal',99)">
 <h3>Buffalo Chicken Meal</h3>
 <p>₱99</p>
 <button onclick="addItem('Buffalo Chicken Meal',99)">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="images/teriyaki.jpg">
+<img src="images/teriyaki.jpg" onclick="addItem('Teriyaki Chicken Meal',99)">
 <h3>Teriyaki Chicken Meal</h3>
 <p>₱99</p>
 <button onclick="addItem('Teriyaki Chicken Meal',99)">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="images/garlic_parmesan.jpg">
+<img src="images/garlic_parmesan.jpg" onclick="addItem('Garlic Parmesan Meal',99)">
 <h3>Garlic Parmesan Meal</h3>
 <p>₱99</p>
 <button onclick="addItem('Garlic Parmesan Meal',99)">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="images/wings_platter.jpg">
-<h3>Chicken Wings Platter</h3>
+<img src="images/wings_platter.jpg" onclick="addItem('Chicken Wings Platter',179)">
+<h3>Chicken Wings Platter (6pcs)</h3>
 <p>₱179</p>
 <button onclick="addItem('Chicken Wings Platter',179)">Add to Cart</button>
 </div>
 
 </div>
-
 </div>
 
-
 <div class="section">
-
 <h2>Your Cart</h2>
-
 <div class="cart">
-
 <div id="cartList"></div>
-
 <h3>Total: ₱<span id="total">0</span></h3>
-
 <input id="custName" placeholder="Your Name">
 <input id="custPhone" placeholder="Phone Number">
-
 <button onclick="submitOrder()">Submit Order</button>
 
 <h3>GCash Payment</h3>
-
-<p>Send payment to:</p>
 <p><b>0953 335 8462</b></p>
-
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=GCASH09174567890">
-
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=GCASH09533358462">
 </div>
-
 </div>
-
 
 <div class="section">
-
 <h2>Customer Reviews</h2>
-
 <h3 id="avgRating">⭐ 0 / 5</h3>
-
 <div id="reviewList"></div>
 
 <input id="revName" placeholder="Your name">
@@ -235,18 +123,12 @@ font-weight:bold;
 </select>
 
 <textarea id="revText" placeholder="Write review"></textarea>
-
 <button onclick="submitReview()">Submit Review</button>
-
 </div>
 
-
 <div class="section">
-
 <h2>Food Gallery</h2>
-
 <div class="gallery">
-
 <img src="images/gallery1.jpg">
 <img src="images/gallery2.jpg">
 <img src="images/gallery3.jpg">
@@ -257,140 +139,120 @@ font-weight:bold;
 <img src="images/gallery8.jpg">
 <img src="images/gallery9.jpg">
 <img src="images/gallery10.jpg">
-  
 </div>
-
 </div>
-
 
 <div class="section">
-
 <h2>Admin Dashboard</h2>
-
 <div class="admin">
-
-<button onclick="loadOrders()">Load Orders</button>
-
 <div id="orders"></div>
-
+</div>
 </div>
 
-</div>
-
-
-<a class="messenger" href="https://www.facebook.com/thomas.alvareziii.5/" target="_blank">Messenger Chat</a>
-
+<a class="messenger" href="https://www.facebook.com/thomas.alvareziii.5" target="_blank">Messenger Chat</a>
 
 <script>
-
 let cart=[]
 let total=0
+let lastCount=0
 
 const ORDER_SCRIPT="PASTE_GOOGLE_SCRIPT_ORDER_URL"
 const REVIEW_SCRIPT="PASTE_GOOGLE_SCRIPT_REVIEW_URL"
 
 function addItem(name,price){
-
 cart.push({name,price})
-
 total+=price
-
 renderCart()
-
 }
 
 function removeItem(index){
-
 total-=cart[index].price
-
 cart.splice(index,1)
-
 renderCart()
-
 }
 
 function renderCart(){
-
 const list=document.getElementById("cartList")
-
 list.innerHTML=""
-
 cart.forEach((item,i)=>{
-
 const div=document.createElement("div")
-
 div.className="cart-item"
-
 div.innerHTML=item.name+" ₱"+item.price+" <button onclick='removeItem("+i+")'>Cancel</button>"
-
 list.appendChild(div)
-
 })
-
 document.getElementById("total").textContent=total
-
 }
 
 function submitOrder(){
-
 const name=document.getElementById("custName").value
-
 const phone=document.getElementById("custPhone").value
+const orderList=cart.map(item=>item.name).join(", ")
 
 fetch(ORDER_SCRIPT,{
-
 method:"POST",
-
-body:JSON.stringify({name,phone,cart,total})
-
+body:JSON.stringify({name,phone,order:orderList,total})
 })
 
 alert("Order sent!")
-
+cart=[]
+total=0
+renderCart()
 }
 
 function submitReview(){
-
 const name=document.getElementById("revName").value
-
 const rating=document.getElementById("revRating").value
-
 const text=document.getElementById("revText").value
 
-const div=document.createElement("div")
+fetch(REVIEW_SCRIPT,{
+method:"POST",
+body:JSON.stringify({name,rating,text})
+})
 
-div.className="review"
-
-div.innerHTML="<b>"+name+"</b> ⭐"+rating+"<br>"+text
-
-document.getElementById("reviewList").appendChild(div)
-
+alert("Review submitted!")
 }
 
 function loadOrders(){
-
 fetch(ORDER_SCRIPT)
-
 .then(r=>r.json())
-
 .then(data=>{
+
+if(data.length>lastCount){
+new Audio("https://www.soundjay.com/buttons/sounds/button-3.mp3").play()
+}
+lastCount=data.length
 
 let html="<table border='1'><tr><th>Name</th><th>Phone</th><th>Order</th><th>Total</th></tr>"
 
-data.forEach(o=>{
-
-html+="<tr><td>"+o.name+"</td><td>"+o.phone+"</td><td>"+o.order+"</td><td>"+o.total+"</td></tr>"
-
+data.reverse().forEach(o=>{
+html+="<tr><td>"+o.name+"</td><td>"+o.phone+"</td><td>"+o.order+"</td><td>₱"+o.total+"</td></tr>"
 })
 
 html+="</table>"
-
 document.getElementById("orders").innerHTML=html
-
 })
-
 }
 
+function loadReviews(){
+fetch(REVIEW_SCRIPT)
+.then(r=>r.json())
+.then(data=>{
+let totalRating=0
+let html=""
+data.forEach(r=>{
+totalRating+=Number(r.rating)
+html+=`<div class="review"><b>${r.name}</b> ⭐${r.rating}<br>${r.text}</div>`
+})
+document.getElementById("reviewList").innerHTML=html
+let avg=(totalRating/data.length)||0
+document.getElementById("avgRating").textContent="⭐ "+avg.toFixed(1)+" / 5"
+})
+}
+
+setInterval(loadOrders,5000)
+setInterval(loadReviews,5000)
+loadOrders()
+loadReviews()
 </script>
 
 </body>

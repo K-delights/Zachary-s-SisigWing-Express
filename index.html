@@ -156,8 +156,8 @@ let cart=[]
 let total=0
 let lastCount=0
 
-const ORDER_SCRIPT="PASTE_GOOGLE_SCRIPT_ORDER_URL"
-const REVIEW_SCRIPT="PASTE_GOOGLE_SCRIPT_REVIEW_URL"
+const ORDER_SCRIPT="https://script.google.com/macros/s/AKfycbwJUWMwWWx1VcJDbguG00YEQh_fZTO1gbtstHDF-YbpZpNp4te5zvL9yU8BeEacOGzZ/exec"
+const REVIEW_SCRIPT="https://script.google.com/macros/s/AKfycbwJUWMwWWx1VcJDbguG00YEQh_fZTO1gbtstHDF-YbpZpNp4te5zvL9yU8BeEacOGzZ/exec"
 
 function addItem(name,price){
 cart.push({name,price})
@@ -213,7 +213,7 @@ alert("Review submitted!")
 }
 
 function loadOrders(){
-fetch(ORDER_SCRIPT)
+fetch(ORDER_SCRIPT + "?type=orders")
 .then(r=>r.json())
 .then(data=>{
 
@@ -234,7 +234,7 @@ document.getElementById("orders").innerHTML=html
 }
 
 function loadReviews(){
-fetch(REVIEW_SCRIPT)
+fetch(REVIEW_SCRIPT + "?type=reviews")
 .then(r=>r.json())
 .then(data=>{
 let totalRating=0
